@@ -1,7 +1,7 @@
 export const levelConfig = {
   easy: { cols: 4, rows: 3, pairs: 6, moveLimit: null },
   medium: { cols: 4, rows: 4, pairs: 8, moveLimit: 20 },
-  hard: { cols: 6, rows: 6, pairs: 18, moveLimit: 30 },
+  hard: { cols: 6, rows: 6, pairs: 18, moveLimit: 60 },
 }
 
 export const levelLabels = {

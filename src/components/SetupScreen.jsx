@@ -11,7 +11,7 @@ export default function SetupScreen({ level, cardType, onLevelChange, onCardType
           <button
             type="button"
             onClick={() => onLevelChange("easy")}
-            className={`cursor-pointer rounded-xl border py-4 text-sm font-semibold uppercase tracking-widest transition-colors ${
+            className={`cursor-pointer rounded-xl border py-4 text-sm font-semibold tracking-widest transition-colors ${
               level === "easy"
                 ? "border-emerald-400 bg-emerald-500/10 text-emerald-300"
                 : "border-emerald-500/40 text-emerald-500/70 hover:border-emerald-400 hover:text-emerald-400"
@@ -22,7 +22,7 @@ export default function SetupScreen({ level, cardType, onLevelChange, onCardType
           <button
             type="button"
             onClick={() => onLevelChange("medium")}
-            className={`cursor-pointer rounded-xl border py-4 text-sm font-semibold uppercase tracking-widest transition-colors ${
+            className={`cursor-pointer rounded-xl border py-4 text-sm font-semibold tracking-widest transition-colors ${
               level === "medium"
                 ? "border-amber-400 bg-amber-500/10 text-amber-300"
                 : "border-amber-500/40 text-amber-500/70 hover:border-amber-400 hover:text-amber-400"
@@ -33,7 +33,7 @@ export default function SetupScreen({ level, cardType, onLevelChange, onCardType
           <button
             type="button"
             onClick={() => onLevelChange("hard")}
-            className={`cursor-pointer rounded-xl border py-4 text-sm font-semibold uppercase tracking-widest transition-colors ${
+            className={`cursor-pointer rounded-xl border py-4 text-sm font-semibold tracking-widest transition-colors ${
               level === "hard"
                 ? "border-red-400 bg-red-500/10 text-red-300"
                 : "border-red-500/40 text-red-500/70 hover:border-red-400 hover:text-red-400"

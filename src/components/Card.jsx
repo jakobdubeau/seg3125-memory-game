@@ -44,15 +44,20 @@ export default function Card({ card, cardType, onFlip }) {
       type="button"
       onClick={() => onFlip(card)}
       disabled={revealed}
-      className={`@container flex aspect-square items-center justify-center rounded-lg border transition-colors duration-200 ${
-        card.isMatched
-          ? "border-white/10 bg-white/5 opacity-40"
-          : revealed
-            ? "border-white/30 bg-white/10"
-            : "cursor-pointer border-white/10 bg-white/5 hover:border-white/30 hover:bg-white/10"
+      className={`@container aspect-square w-full perspective-midrange ${
+        card.isMatched ? "opacity-40" : revealed ? "" : "cursor-pointer"
       }`}
     >
-      {revealed ? <CardFace value={card.value} cardType={cardType} /> : null}
+      <div
+        className={`relative h-full w-full transition-transform duration-300 transform-3d ${
+          revealed ? "rotate-y-180" : ""
+        }`}
+      >
+        <div className="absolute inset-0 rounded-lg border border-white/10 bg-white/5 backface-hidden transition-colors hover:border-white/30 hover:bg-white/10" />
+        <div className="absolute inset-0 flex rotate-y-180 items-center justify-center rounded-lg border border-white/30 bg-white/10 backface-hidden">
+          <CardFace value={card.value} cardType={cardType} />
+        </div>
+      </div>
     </button>
   )
 }

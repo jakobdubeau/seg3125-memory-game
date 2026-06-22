@@ -3,7 +3,7 @@
 export default function SetupScreen({ level, cardType, onLevelChange, onCardTypeChange, onStart }) {
   return (
     <section className="flex w-full max-w-lg flex-col gap-16">
-      <h1 className="text-center text-8xl font-bold tracking-tight">Memory Match</h1>
+      <h1 className="text-center text-8xl font-bold tracking-wider">Memory Match</h1>
 
       <div className="flex flex-col gap-4">
         <span className="text-sm uppercase tracking-widest text-white/50">Difficulty</span>
